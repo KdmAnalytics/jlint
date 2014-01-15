@@ -25,6 +25,7 @@ and newer.
 
 Version 3.1.X: Other patches to address compilation on newer compilers.
 Patch for version 3.1.2 contributed by Paul Roemer, tested on g++ 4.2.
+Patch for version 3.1.3 contributed by Fabian Streitel, tested on 4.2.1.
 
 Usage:
 ------

@@ -83,8 +83,9 @@ print "\n\t";
 ($is_cpp) = grep /$target\.c[cpx+]*$/, @cfiles;
 $is_cpp =~ s/.*\.c//; # remove all but suffix (also removes first letter of it)
 if (is_cpp) { print '$(CPP)'; } else { print '$(CC)'; }
-print ' $(LFLAGS) -o ', "$target";
+print ' -o ', "$target";
 foreach (@cfiles) { /\.c[cpx+]*$/; print " $`.o"; } # print name + .o
+print ' $(LFLAGS)';
 print "\n\n"; # target line finished
 
 printDeps();
