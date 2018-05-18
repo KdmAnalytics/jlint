@@ -140,11 +140,11 @@ struct vbm_operand {
 
 int_type_range const ranges[] = { 
   //   min         max
-  {0x00000000, 0x00000001}, // tp_bool
-    {0xffffff80, 0x0000007f}, // tp_byte 
-      {0x00000000, 0x0000ffff}, // tp_char
-        {0xffff8000, 0x00007fff}, // tp_short
-          {0x80000000, 0x7fffffff}  // tp_int
+  {0, 1}, // tp_bool
+    {-128, 127}, // tp_byte 
+      {0, 65535}, // tp_char
+        {-32768, 32767}, // tp_short
+          {-2147483648, 2147483647}  // tp_int
 };
 
 int const array_type[] = { 
